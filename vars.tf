@@ -4,12 +4,15 @@ variable "region" {
 }
 
 locals {
- availability_zones = ["${var.region}a", "${var.region}b"]
+  availability_zones = ["${var.region}a", "${var.region}b"]
 }
 
-variable "aws-personal_security_key" {
+variable "personal_cidr_ip_address" {
     type = string
-    default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCPOYg3ysyJemNb/6LdR8pJ1eCUE193exkxJ5DjAq08o+IrbwfvaoPemQnGHLRaTTXZKrR9QzclZN0WbYgqHImnj5ANOBflVPqr8a+QdoP7Z8NAEQrYv6Es7HPUVDp61rFCVLS/WZu1pP3HiuAw4xhennIRvB0UunfCSlCwirRnpECcVfwSoPqS+u/YrBpBy8ytAN7P8KYwE0FHdm5XKoPee918aD+SejxzxVgE2dkDFDx8wgrAHdhhrvArcuc9GkzEj7Rji5D6DlUTXQHy3C9/zEGlE3akpGc7U3/3ROoTf77dmPXHOjkoCnMIsdbR9QO+s8n/fvHhVi/I4u4XpJNI/QgOoYTehHrNeCSgBm8JyYt2GDYdWqjtPrzJhiq7fWN98rUmmLJIx54FRmuTrUxMZ8GW8ZedLIvNGhpdAZpBUcUZyvtIBGCOR0pmJcQ2UnATIJo8dbzzAqr9uHv8laBPOIyDUd9QxsNzjoZBwn7XkcllFDAVh5K8Oil6EXdGrM8= john@john-MS-7C56"
+}
+
+variable "aws_personal_ssh_public_key" {
+    type = string
 }
 
 variable "ubuntu_ami" {
@@ -41,7 +44,6 @@ variable "docker_blog_app_setup" {
     EOL
 }
 
-variable "wesamkhalildotuk_zone_id" {
+variable "main_route53_zone_id" {
   type = string
-  default = "Z01064701HUUN21JB8C76"
 }

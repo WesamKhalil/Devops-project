@@ -35,7 +35,7 @@ resource "aws_security_group" "blog_web_server_sg" {
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_blocks = ["81.78.87.34/32"]
+    cidr_blocks = [var.personal_cidr_ip_address]
   }
 
   ingress {
@@ -48,7 +48,7 @@ resource "aws_security_group" "blog_web_server_sg" {
 
 resource "aws_key_pair" "personal_kp" {
   key_name   = "tf-personal-kp"
-  public_key = var.aws-personal_security_key
+  public_key = var.aws_personal_ssh_public_key
 }
 
 resource "aws_instance" "blog_web_server_instance" {
@@ -110,7 +110,7 @@ resource "aws_lb_listener" "blog_web_server_lb_listener" {
 
 
 resource "aws_route53_record" "www" {
-  zone_id = var.wesamkhalildotuk_zone_id
+  zone_id = var.main_route53_zone_id
   name    = "www.wesamkhalil.uk"
   type    = "A"
 
