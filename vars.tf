@@ -47,3 +47,7 @@ variable "docker_blog_app_setup" {
 variable "main_route53_zone_id" {
   type = string
 }
+
+variable "web_domain_certificate_arn" {
+    type = string
+}
