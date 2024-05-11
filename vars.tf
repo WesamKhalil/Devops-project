@@ -1,5 +1,5 @@
 variable "region" {
-  type = string
+  type    = string
   default = "us-east-1"
 }
 
@@ -8,21 +8,21 @@ locals {
 }
 
 variable "personal_cidr_ip_address" {
-    type = string
+  type = string
 }
 
 variable "aws_personal_ssh_public_key" {
-    type = string
+  type = string
 }
 
 variable "ubuntu_ami" {
-  type = string
+  type    = string
   default = "ami-0c7217cdde317cfec"
 }
 
 variable "docker_blog_app_setup" {
-    type = string
-    default = <<-EOL
+  type    = string
+  default = <<-EOL
       #!/bin/bash -xe
 
       sudo apt-get update -y
@@ -49,5 +49,5 @@ variable "main_route53_zone_id" {
 }
 
 variable "web_domain_certificate_arn" {
-    type = string
+  type = string
 }
