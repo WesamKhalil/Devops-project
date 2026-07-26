@@ -1,2 +1,2 @@
 # Devops-project
-Devops project ideally using terraform, jenkins, docker, kubernetes and aws,
+Devops project using GitHub actions, Terraform, Docker, Kubernetes and AWS.
