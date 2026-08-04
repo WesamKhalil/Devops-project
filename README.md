@@ -1,6 +1,6 @@
 # Devops project
 
-Devops project ideally using Terraform, Jenkins, Docker, Kubernetes, and AWS.
+Devops project ideally using Terraform, Docker, and AWS.
 
 This README is intentionally minimal and shows how to run the project locally and deploy infrastructure. Replace example paths and values with the real ones from this repository.
 
@@ -10,9 +10,7 @@ This README is intentionally minimal and shows how to run the project locally an
 - Node.js (>=16) and npm or yarn
 - Terraform (>=1.0)
 - Docker
-- kubectl
 - AWS CLI (configured with credentials)
-- (Optional) Jenkins for CI/CD
 
 ## Quick start — run locally
 
@@ -63,18 +61,6 @@ Or apply directly:
    terraform apply -auto-approve
 
 Ensure AWS credentials/region are configured (`aws configure` or environment variables).
-
-## Kubernetes
-
-Apply manifests from the `k8s/` directory:
-
-   kubectl apply -f k8s/
-
-Ensure your kubeconfig points to the correct cluster and that container images are available in a registry reachable by the cluster.
-
-## Jenkins
-
-If a `Jenkinsfile` exists, create a pipeline in Jenkins pointing to this repository and configure required credentials (AWS, Docker registry, etc.).
 
 ## Notes
 
